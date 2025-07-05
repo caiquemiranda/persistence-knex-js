@@ -8,3 +8,7 @@ test("deve criar tabela", async ()=>{
     const tabelaExiste = await knex.schema.hasTable("livros")
     expect(tabelaExiste).toBe(true)
 })
+
+afterAll(() =>{
+    knex.destroy()
+});
