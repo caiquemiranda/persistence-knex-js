@@ -2,6 +2,7 @@ const knexfile = require("../knexfile")
 const knex = require("knex")(knexfile)
 
 const criarTabela = require("../src/criarTabela")
+const excluirTabela = require("../src/deletarTabela")
 
 test("deve criar tabela", async ()=>{
     await criarTabela(knex)
@@ -12,3 +13,4 @@ test("deve criar tabela", async ()=>{
 afterAll(() =>{
     knex.destroy()
 });
+
