@@ -10,6 +10,12 @@ test("deve criar tabela", async ()=>{
     expect(tabelaExiste).toBe(true)
 })
 
+test("deve excluir tabela", async()=>{
+    await excluirTabela(knex)
+    const excluirTabela = await knex.schema.hasTable("livros")
+    expect(tabelaExiste).toBe(false)
+})
+
 afterAll(() =>{
     knex.destroy()
 });
