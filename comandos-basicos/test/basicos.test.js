@@ -12,7 +12,7 @@ test("deve criar tabela", async ()=>{
 
 test("deve excluir tabela", async()=>{
     await excluirTabela(knex)
-    const excluirTabela = await knex.schema.hasTable("livros")
+    const tabelaExiste = await knex.schema.hasTable("livros")
     expect(tabelaExiste).toBe(false)
 })
 
