@@ -19,4 +19,3 @@ test("deve excluir tabela", async()=>{
 afterAll(() =>{
     knex.destroy()
 });
-

@@ -1,3 +1,3 @@
 module.exports = async(conexao) => {
-    await conexao.schema.dropTableIfExists('livros');
+    await conexao.schema.dropTableIfExists("livros")
 }
